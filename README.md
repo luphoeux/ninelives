@@ -1,0 +1,1 @@
+# CatalogoSamsung2026

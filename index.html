@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Agencia digital creativa especializada en branding, diseñ±o web y marketing digital. Construimos experiencias digitales premium.">
+    <title>Libélula - La plataforma líder de pagos en Bolivia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Sora for a modern, tech look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons for crisp icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Three.js for 3D model -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="images/logo_light.png" alt="Libélula" class="logo-light">
+                <img src="images/libelula_logo_dark.png" alt="Libélula" class="logo-dark">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Inicio</a></li>
+                    <li><a href="#services" class="nav-link">Servicios</a></li>
+                    <li><a href="#work" class="nav-link">Portafolio</a></li>
+                    <li><a href="#about" class="nav-link">Nosotros</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="ri-moon-line"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary">Reserva una cita</a>
+                <button class="mobile-toggle" aria-label="Abrir menú">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <img src="images/libelula_logo.svg" alt="Libélula" class="hero-logo">
+                    <h1 class="hero-title">La plataforma líder de pagos en Bolivia</h1>
+                    <p class="hero-text">
+                        Somos la primera plataforma multicanal que integra pagos en línea y facturación electrónica
+                        certificada
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Inicia un chat con nuestro equipo </a>
+                    </div>
+                </div>
+
+                <!-- Scroll Down Button -->
+                <a href="#services" class="scroll-down" aria-label="Scroll to services">
+                    <i class="ri-arrow-down-line"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">¿Por qué elegirnos?</h2>
+                    <p class="section-description">
+                        En Libélula, creemos que el futuro de los negocios está en la transformación digital, y
+                        trabajamos para ser el aliado estratégico de las empresas que buscan crecer, innovar y generar
+                        confianza en sus clientes.
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="ri-store-2-line"></i></div>
+                        <div class="stat-content">
+                            <p class="stat-text">Más de <strong>600 comercios en Bolivia</strong> confían en nuestra
+                                plataforma.</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="ri-bank-card-line"></i></div>
+                        <div class="stat-content">
+                            <p class="stat-text">Procesamos <strong>+1.405.850 pagos</strong>, asegurando transacciones
+                                ágiles y seguras.</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="ri-group-line"></i></div>
+                        <div class="stat-content">
+                            <p class="stat-text">Clientes en múltiples sectores: <strong>estatales, seguros, educación,
+                                    retail</strong> y más.</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="ri-trophy-line"></i></div>
+                        <div class="stat-content">
+                            <p class="stat-text">Nos posicionamos como la <strong>pasarela de pagos líder en
+                                    Bolivia</strong> gracias al respaldo de nuestros clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestros Servicios Section -->
+        <section id="about" class="section our-services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros servicios</h2>
+
+                    <!-- Tabs -->
+                    <div class="service-tabs">
+                        <button class="tab-btn" data-tab="transacciones">TRANSACCIONES</button>
+                        <button class="tab-btn active" data-tab="suite">SUITE DE PAGOS</button>
+                    </div>
+
+                    <!-- Descriptions wrapper -->
+                    <div class="tab-descriptions-wrapper">
+                        <!-- Description for Transacciones -->
+                        <p class="section-description tab-description" id="transacciones-description">
+                            Procesa todo tipo de transacciones de forma segura y eficiente. Desde pagos en caja hasta
+                            transferencias internacionales, ofrecemos múltiples canales de pago adaptados a las
+                            necesidades
+                            de tu negocio.
+                        </p>
+
+                        <!-- Description for Suite de Pagos -->
+                        <p class="section-description tab-description active" id="suite-description">
+                            Más que una pasarela de pagos, un ecosistema de soluciones. Nuestra suite de pagos es un
+                            paquete
+                            integral que te ofrece todo lo necesario para gestionar tus pagos y facturas de forma
+                            eficiente.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Suite de Pagos -->
+                <div class="tab-content active" id="suite-content">
+                    <div class="products-grid">
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #5753a3 0%, #7b77c9 100%);">
+                            <div class="product-icon">
+                                <i class="ri-bank-card-line"></i>
+                            </div>
+                            <h3>Pasarela de pagos</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN</a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #00a896 0%, #02c39a 100%);">
+                            <div class="product-icon">
+                                <i class="ri-file-list-3-line"></i>
+                            </div>
+                            <h3>Sistema de facturación</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN</a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);">
+                            <div class="product-icon">
+                                <i class="ri-link"></i>
+                            </div>
+                            <h3>Links de pago</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN</a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #7209b7 0%, #b185db 100%);">
+                            <div class="product-icon">
+                                <i class="ri-computer-line"></i>
+                            </div>
+                            <h3>Portal de pagos</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #f07167 0%, #f4978e 100%);">
+                            <div class="product-icon">
+                                <i class="ri-calendar-check-line"></i>
+                            </div>
+                            <h3>Cobranza Proactiva</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #06d6a0 0%, #1be7b0 100%);">
+                            <div class="product-icon">
+                                <i class="ri-message-3-line"></i>
+                            </div>
+                            <h3>Chatbot</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Transacciones (hidden by default) -->
+                <div class="tab-content" id="transacciones-content">
+                    <div class="products-grid">
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);">
+                            <div class="product-icon">
+                                <i class="ri-shopping-cart-line"></i>
+                            </div>
+                            <h3>Pagos en caja</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #4ecdc4 0%, #556270 100%);">
+                            <div class="product-icon">
+                                <i class="ri-exchange-dollar-line"></i>
+                            </div>
+                            <h3>Transferencias</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #f7b731 0%, #fc5c65 100%);">
+                            <div class="product-icon">
+                                <i class="ri-qr-scan-2-line"></i>
+                            </div>
+                            <h3>Cobros QR</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #a55eea 0%, #45aaf2 100%);">
+                            <div class="product-icon">
+                                <i class="ri-smartphone-line"></i>
+                            </div>
+                            <h3>Billetera Móvil</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #fd9644 0%, #fed330 100%);">
+                            <div class="product-icon">
+                                <i class="ri-global-line"></i>
+                            </div>
+                            <h3>Pagos Internacionales</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                        <div class="product-card"
+                            style="background: linear-gradient(135deg, #26de81 0%, #2bcbba 100%);">
+                            <div class="product-icon">
+                                <i class="ri-secure-payment-line"></i>
+                            </div>
+                            <h3>Tokenización</h3>
+                            <a href="#" class="product-link">MÁS INFORMACIÓN </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+
+
+
+        <!-- Clients Section -->
+
+
+        <!-- Clients Section -->
+        <section id="clients" class="section clients">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"
+                        style="color: var(--primary-color); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px;">
+                        ESTAMOS ORGULLOSOS DE TRABAJAR CON ESTAS EMPRESAS</h2>
+                </div>
+                <div class="clients-grid">
+                    <div class="client-row">
+                        <div class="client-logo"><img src="images/clients/light/1.png" class="logo-light"><img
+                                src="images/clients/dark/1.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/2.png" class="logo-light"><img
+                                src="images/clients/dark/2.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/3.png" class="logo-light"><img
+                                src="images/clients/dark/3.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/4.png" class="logo-light"><img
+                                src="images/clients/dark/4.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/5.png" class="logo-light"><img
+                                src="images/clients/dark/5.png" class="logo-dark"></div>
+                    </div>
+                    <div class="client-row">
+                        <div class="client-logo"><img src="images/clients/light/6.png" class="logo-light"><img
+                                src="images/clients/dark/6.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/7.png" class="logo-light"><img
+                                src="images/clients/dark/7.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/8.png" class="logo-light"><img
+                                src="images/clients/dark/8.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/9.png" class="logo-light"><img
+                                src="images/clients/dark/9.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/10.png" class="logo-light"><img
+                                src="images/clients/dark/10.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/11.png" class="logo-light"><img
+                                src="images/clients/dark/11.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/12.png" class="logo-light"><img
+                                src="images/clients/dark/12.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/13.png" class="logo-light"><img
+                                src="images/clients/dark/13.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/14.png" class="logo-light"><img
+                                src="images/clients/dark/14.png" class="logo-dark"></div>
+                    </div>
+                    <div class="client-row">
+                        <div class="client-logo"><img src="images/clients/light/15.png" class="logo-light"><img
+                                src="images/clients/dark/15.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/16.png" class="logo-light"><img
+                                src="images/clients/dark/16.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/17.png" class="logo-light"><img
+                                src="images/clients/dark/17.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/18.png" class="logo-light"><img
+                                src="images/clients/dark/18.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/19.png" class="logo-light"><img
+                                src="images/clients/dark/19.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/20.png" class="logo-light"><img
+                                src="images/clients/dark/20.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/21.png" class="logo-light"><img
+                                src="images/clients/dark/21.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/22.png" class="logo-light"><img
+                                src="images/clients/dark/22.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/23.png" class="logo-light"><img
+                                src="images/clients/dark/23.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/24.png" class="logo-light"><img
+                                src="images/clients/dark/24.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/25.png" class="logo-light"><img
+                                src="images/clients/dark/25.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/26.png" class="logo-light"><img
+                                src="images/clients/dark/26.png" class="logo-dark"></div>
+                    </div>
+                    <div class="client-row">
+                        <div class="client-logo"><img src="images/clients/light/27.png" class="logo-light"><img
+                                src="images/clients/dark/27.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/28.png" class="logo-light"><img
+                                src="images/clients/dark/28.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/29.png" class="logo-light"><img
+                                src="images/clients/dark/29.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/30.png" class="logo-light"><img
+                                src="images/clients/dark/30.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/31.png" class="logo-light"><img
+                                src="images/clients/dark/31.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/32.png" class="logo-light"><img
+                                src="images/clients/dark/32.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/33.png" class="logo-light"><img
+                                src="images/clients/dark/33.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/34.png" class="logo-light"><img
+                                src="images/clients/dark/34.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/35.png" class="logo-light"><img
+                                src="images/clients/dark/35.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/36.png" class="logo-light"><img
+                                src="images/clients/dark/36.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/37.png" class="logo-light"><img
+                                src="images/clients/dark/37.png" class="logo-dark"></div>
+                    </div>
+                    <div class="client-row">
+                        <div class="client-logo"><img src="images/clients/light/38.png" class="logo-light"><img
+                                src="images/clients/dark/38.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/39.png" class="logo-light"><img
+                                src="images/clients/dark/39.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/40.png" class="logo-light"><img
+                                src="images/clients/dark/40.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/41.png" class="logo-light"><img
+                                src="images/clients/dark/41.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/42.png" class="logo-light"><img
+                                src="images/clients/dark/42.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/43.png" class="logo-light"><img
+                                src="images/clients/dark/43.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/44.png" class="logo-light"><img
+                                src="images/clients/dark/44.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/45.png" class="logo-light"><img
+                                src="images/clients/dark/45.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/46.png" class="logo-light"><img
+                                src="images/clients/dark/46.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/47.png" class="logo-light"><img
+                                src="images/clients/dark/47.png" class="logo-dark"></div>
+                    </div>
+                    <div class="client-row">
+                        <div class="client-logo"><img src="images/clients/light/48.png" class="logo-light"><img
+                                src="images/clients/dark/48.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/49.png" class="logo-light"><img
+                                src="images/clients/dark/49.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/50.png" class="logo-light"><img
+                                src="images/clients/dark/50.png" class="logo-dark"></div>
+                        <div class="client-logo"><img src="images/clients/light/51.png" class="logo-light"><img
+                                src="images/clients/dark/51.png" class="logo-dark"></div>
+                    </div>
+                </div>
+                <!-- Pagination dots for mobile -->
+                <div class="clients-pagination"></div>
+            </div>
+        </section>
+        <!-- Contact Form Section -->
+        <section id="contact-form" class="section contact-section">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <span class="contact-pretitle">Contáctanos para mayor información</span>
+                        <h2 class="contact-title">Responderemos a la brevedad posible</h2>
+                    </div>
+
+                    <form id="contactForm" class="contact-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nombre<span class="required">*</span></label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Ej. Juan"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Teléfono/Celular<span
+                                        class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Ej. 73285854"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Correo electrónico<span
+                                        class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="Ej. nombre@gmail.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message" class="form-label">Mensaje<span class="required">*</span></label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Escribe aquí tu mensaje..." maxlength="150" required></textarea>
+                            <div class="char-count">0/150</div>
+                        </div>
+
+                        <div class="form-footer">
+                            <!-- Visual placeholder for reCAPTCHA -->
+                            <div class="g-recaptcha" data-sitekey="6LfKlCQsAAAAAKKii0Y0DPlRh2xvtZlY937DAKgj"
+                                data-callback="onRecaptchaSuccess"></div>
+
+                            <button type="submit" class="btn-submit" id="submitBtn" disabled>Enviar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Top Section -->
+            <div class="footer-top">
+                <!-- Logo and Description -->
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo"><img src="images/libelula_logo.svg" alt="Libélula"></a>
+                    <p class="footer-tagline">La plataforma líder de pagos en Bolivia</p>
+                    <p class="footer-schedule">Lunes a viernes<br>9:00 a 18:00 hrs.</p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="footer-socials">
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-btn" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+
+            <!-- Middle Section -->
+            <div class="footer-middle">
+                <!-- Services -->
+                <div class="footer-nav-group">
+                    <h4>SERVICIOS</h4>
+                    <ul>
+                        <li><a href="#" class="footer-nav-link">Suite de pagos</a></li>
+                        <li><a href="#" class="footer-nav-link">Transacciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- About -->
+                <div class="footer-nav-group">
+                    <h4>SOBRE NOSOTROS</h4>
+                    <ul>
+                        <li><a href="#" class="footer-nav-link">Empresa</a></li>
+                        <li><a href="#" class="footer-nav-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-nav-group">
+                    <h4>CONTACTO</h4>
+                    <ul>
+                        <li><a href="tel:22773367" class="footer-nav-link">(2)2773367</a></li>
+                        <li><a href="tel:+59170621222" class="footer-nav-link">+591 70621222</a></li>
+                        <li><a href="mailto:soporte@todotix.bo" class="footer-nav-link">soporte@todotix.bo</a></li>
+                        <li><a href="mailto:soporte@libelula.bo" class="footer-nav-link">soporte@libelula.bo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Location -->
+                <div class="footer-nav-group">
+                    <h4>UBICACIÓN</h4>
+                    <p class="footer-address">Calacoto C.14, entre Av. Los Sauces y Av. Costanera #8215</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 | TODOS LOS DERECHOS RESERVADOS | DESARROLLADO POR LIBÉLULA - TODOTIX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Support Button -->
+    <a href="#contact" class="support-btn" aria-label="Soporte">
+        <i class="ri-question-line"></i>
+        <span>Soporte</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <script type="module" src="background3d.js"></script>
+    <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+
+</html>

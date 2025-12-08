@@ -1,0 +1,55 @@
+// Función para actualizar el color según el tema
+        const updateCursorColor = () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const bgColor = isDark ? '#FFFFFF' : '#5753a3';
+            const pulseAnimation = isDark ? 'pulse-wave-dark 2s infinite' : 'pulse-wave 2s infinite';
+            customCursor.style.backgroundColor = bgColor;
+            customCursor.style.animation = pulseAnimation;
+        };
+        
+        customCursor.className = 'custom-cursor';
+        customCursor.style.cssText = `
+            width: 24px;
+            height: 24px;
+            background-color: #5753a3;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.5s ease;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            animation: pulse-wave 2s infinite;
+        `;
+        document.body.appendChild(customCursor);
+        
+        // Actualizar color inicial
+        updateCursorColor();
+        
+        // Observar cambios de tema
+        const themeObserver = new MutationObserver(updateCursorColor);
+        themeObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+
+        // Actualizar posición del cursor
+        hero.addEventListener('mousemove', (e) => {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+            customCursor.style.opacity = '1';
+        });
+
+        // Ocultar cuando sale del hero
+        hero.addEventListener('mouseleave', () => {
+            customCursor.style.opacity = '0';
+        });
+
+        // Efecto de click (hacer más pequeño temporalmente)
+        hero.addEventListener('mousedown', () => {
+            customCursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
+        });
+
+        hero.addEventListener('mouseup', () => {
+            customCursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        });

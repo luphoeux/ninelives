@@ -19,7 +19,7 @@ const translations = {
     services_desc: "Impulsamos el crecimiento de grandes organizaciones mediante software a medida, ecosistemas fintech y soluciones de transformación digital escalables.",
     
     // Stats
-    stat_1: "Llevamos <strong>+5 años ejecutando proyectos exitosos</strong> junto a las empresas más grandes del país.",
+    stat_1: "Llevamos <strong>+5 años ejecutando proyectos exitosos</strong> junto a empresas consolidadas en su nicho.",
     stat_2: "Un <strong>equipo diverso y talentoso</strong>, preparado para dominar cualquier tecnología que tu proyecto requiera.",
     stat_3: "Dominamos <strong>múltiples stacks tecnológicos</strong>, garantizando que nunca haya límites técnicos para tu visión.",
     stat_4: "Ofrecemos <strong>personalización absoluta a medida</strong>, adaptando nuestros productos base a tus flujos específicos.",
@@ -31,18 +31,27 @@ const translations = {
     capabilities_title: "Servicios Tecnológicos",
     capabilities_desc: "Impulsamos la transformación digital de grandes organizaciones con soluciones a medida, escalables y seguras. Ofrecemos herramientas de última generación para convertir desafíos complejos en soluciones de alto impacto.",
     capabilities_more: "MÁS INFORMACIÓN",
+    
+    // Infrastructure
+    infra_eyebrow: "INFRAESTRUCTURA Y RESPALDO",
+    infra_title: "Potencia en cada solución",
+    infra_desc: "Nuestros servicios están respaldados por una base tecnológica sólida que garantiza escalabilidad, seguridad y alta disponibilidad.",
 
     // Clients
-    clients_title: "ESTAMOS ORGULLOSOS DE TRABAJAR CON ESTAS EMPRESAS",
+    clients_title: "Estamos orgullosos de trabajar con estas empresas",
 
     // Contact Form
     contact_eyebrow: "CONTACTO",
     contact_title: "Hablemos de tu proyecto",
-    contact_desc: "Estamos listos para llevar tu infraestructura tecnológica al siguiente nivel.",
+    contact_desc: "Utilice cualquiera de nuestros canales oficiales para una respuesta inmediata.",
+    contact_method_wa_title: "WhatsApp",
+    contact_method_wa_desc: "Envíanos un mensaje directo para una respuesta rápida.",
+    contact_method_mail_title: "Email",
+    contact_method_mail_desc: "Escríbenos para consultas detalladas o propuestas.",
     form_name: "Nombre Completo",
     form_name_placeholder: "Tu nombre",
     form_email: "Correo Electrónico",
-    form_email_placeholder: "nombre@ejemplo.com",
+    form_email_placeholder: "nivelivesbo@outlook.com",
     form_phone: "Teléfono",
     form_phone_placeholder: "Ej. +000 00000000",
     form_message: "Mensaje",
@@ -107,9 +116,9 @@ const translations = {
     product_payment_desc: "Infraestructura robusta para la gestión de transacciones, portales de pago y conciliación bancaria.",
     product_ecommerce_title: "E-commerce Enterprise",
     product_ecommerce_desc: "Solución de tienda en línea lista para desplegar enfocada en alta transaccionalidad y escala.",
-    product_view_cases: "Ver casos",
-    product_request_demo: "Solicitar Demo",
-    product_consult: "Consultar"
+    product_view_cases: "Ver proyecto",
+    product_request_demo: "Ver proyecto",
+    product_consult: "Ver proyecto"
   },
   en: {
     // Header
@@ -131,7 +140,7 @@ const translations = {
     services_desc: "We drive the growth of large organizations through custom software, fintech ecosystems, and scalable digital transformation solutions.",
 
     // Stats
-    stat_1: "We have been <strong>executing successful projects for +5 years</strong> alongside the country's largest companies.",
+    stat_1: "We have been <strong>executing successful projects for +5 years</strong> alongside consolidated companies in their niche.",
     stat_2: "A <strong>diverse and talented team</strong>, ready to master any technology your project requires.",
     stat_3: "We master <strong>multiple technological stacks</strong>, ensuring there are never technical limits to your vision.",
     stat_4: "We offer <strong>absolute custom tailoring</strong>, adapting our base products to your specific flows.",
@@ -144,17 +153,26 @@ const translations = {
     capabilities_desc: "We drive the digital transformation of large organizations with custom, scalable, and secure solutions. We offer latest-generation tools to turn complex challenges into high-impact solutions.",
     capabilities_more: "LEARN MORE",
 
+    // Infrastructure
+    infra_eyebrow: "INFRASTRUCTURE & SUPPORT",
+    infra_title: "Power in every solution",
+    infra_desc: "Our services are backed by a solid technological base that guarantees scalability, security, and high availability.",
+
     // Clients
     clients_title: "WE ARE PROUD TO WORK WITH THESE COMPANIES",
 
     // Contact Form
     contact_eyebrow: "CONTACT",
     contact_title: "Let's talk about your project",
-    contact_desc: "We are ready to take your technological infrastructure to the next level.",
+    contact_desc: "Use any of our official channels for an immediate response.",
+    contact_method_wa_title: "WhatsApp",
+    contact_method_wa_desc: "Send us a direct message for a fast response.",
+    contact_method_mail_title: "Email",
+    contact_method_mail_desc: "Write to us for detailed inquiries or proposals.",
     form_name: "Full Name",
     form_name_placeholder: "Your name",
     form_email: "Email",
-    form_email_placeholder: "name@example.com",
+    form_email_placeholder: "nivelivesbo@outlook.com",
     form_phone: "Phone",
     form_phone_placeholder: "Eg. +000 00000000",
     form_message: "Message",
@@ -219,8 +237,8 @@ const translations = {
     product_payment_desc: "Robust infrastructure for transaction management, payment portals, and bank reconciliation.",
     product_ecommerce_title: "Enterprise E-commerce",
     product_ecommerce_desc: "Ready-to-deploy online store solution focused on high transactionality and scale.",
-    product_view_cases: "View cases",
-    product_request_demo: "Request Demo",
-    product_consult: "Consult"
+    product_view_cases: "View project",
+    product_request_demo: "View project",
+    product_consult: "View project"
   }
 };

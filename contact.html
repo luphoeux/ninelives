@@ -33,30 +33,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="translations.js"></script>
     <style>
-        .contact-form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--surface-color);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-soft);
-            border: 1px solid var(--border-color);
-        }
+        /* Contact page specific tweaks if any */
+        .section { padding: 100px 0; }
         @media (max-width: 768px) {
-            .contact-form-container {
-                padding: 24px 20px;
-            }
-        }
-        .form-group { margin-bottom: 20px; }
-        .form-label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--heading-color); }
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            background: var(--bg-color);
-            color: var(--text-color);
-            font-family: inherit;
+            .section { padding: 60px 0; }
         }
     </style>
 </head>
@@ -71,23 +51,18 @@
                     <p class="section-description" data-i18n="contact_desc">Estamos listos para llevar tu infraestructura tecnológica al siguiente nivel.</p>
                 </div>
 
-                <div class="contact-form-container">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label class="form-label" data-i18n="form_name">Nombre Completo</label>
-                            <input type="text" class="form-input" data-i18n-placeholder="form_name_placeholder" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" data-i18n="form_email">Correo Corporativo</label>
-                            <input type="email" class="form-input" data-i18n-placeholder="form_email_placeholder" placeholder="nombre@ejemplo.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" data-i18n="form_message">Mensaje</label>
-                            <textarea class="form-textarea" id="message-contact" rows="5" data-i18n-placeholder="form_message_placeholder" placeholder="¿Cómo podemos ayudarte?" maxlength="150" required></textarea>
-                            <div class="char-count" id="char-count-contact">0 / 150</div>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="form_submit">Enviar Mensaje</button>
-                    </form>
+                <div class="contact-methods-container">
+                    <a href="https://wa.me/59177737501" target="_blank" class="contact-method-card">
+                        <div class="method-icon"><i class="ri-whatsapp-line"></i></div>
+                        <h3 data-i18n="contact_method_wa_title">WhatsApp</h3>
+                        <p data-i18n="contact_method_wa_desc">Envíanos un mensaje directo para una respuesta rápida en tiempo real.</p>
+                    </a>
+
+                    <a href="mailto:nivelivesbo@outlook.com" class="contact-method-card">
+                        <div class="method-icon"><i class="ri-mail-line"></i></div>
+                        <h3 data-i18n="contact_method_mail_title">Email</h3>
+                        <p data-i18n="contact_method_mail_desc">Escríbenos para consultas detalladas, propuestas o archivos adjuntos.</p>
+                    </a>
                 </div>
             </div>
         </section>

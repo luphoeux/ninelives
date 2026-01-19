@@ -376,6 +376,12 @@ img {
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  #bg-canvas {
+    display: none;
+  }
+}
+
 #bg-canvas.blur-active {
   filter: blur(5px);
 }
@@ -2095,6 +2101,16 @@ body::before {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    background-image: 
+      radial-gradient(at 50% 50%, transparent, var(--bg-color)),
+      repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.02) 10px, rgba(0, 0, 0, 0.02) 11px);
+    background-attachment: fixed;
+  }
+
+  [data-theme="dark"] .hero {
+    background-image: 
+      radial-gradient(at 50% 50%, transparent, var(--bg-color)),
+      repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.02) 10px, rgba(255, 255, 255, 0.02) 11px);
   }
 
   .hero-logo {

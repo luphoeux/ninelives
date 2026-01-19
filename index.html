@@ -66,13 +66,11 @@
     <!-- Prevent flash of unstyled content (FOUC) -->
     <script>
       (function() {
-        // Get or set theme - always save to localStorage for consistency
+        // Default to light theme
         let savedTheme = localStorage.getItem('theme');
         
         if (!savedTheme) {
-          // First visit - check system preference and save it
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          savedTheme = prefersDark ? 'dark' : 'light';
+          savedTheme = 'light';
           localStorage.setItem('theme', savedTheme);
         }
         

@@ -142,23 +142,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // Back to Top Button
+  // Floating Buttons (WhatsApp & Back to Top)
   const backToTopBtn = document.getElementById("backToTop");
-  if (backToTopBtn) {
+  const whatsappBtn = document.querySelector(".whatsapp-float");
+  
+  if (backToTopBtn || whatsappBtn) {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add("show");
-      } else {
-        backToTopBtn.classList.remove("show");
+      const showButtons = window.scrollY > 300;
+      if (backToTopBtn) {
+        if (showButtons) backToTopBtn.classList.add("show");
+        else backToTopBtn.classList.remove("show");
+      }
+      if (whatsappBtn) {
+        if (showButtons) whatsappBtn.classList.add("show");
+        else whatsappBtn.classList.remove("show");
       }
     });
 
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
-    });
+    }
   }
 
   // Custom Circular Cursor for Hero Section

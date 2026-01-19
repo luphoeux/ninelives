@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ninelives</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo negro.svg">
+    
+    <!-- Prevent flash of unstyled content (FOUC) -->
+    <script>
+      (function() {
+        // Get or set theme - always save to localStorage for consistency
+        let savedTheme = localStorage.getItem('theme');
+        
+        if (!savedTheme) {
+          // First visit - check system preference and save it
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          savedTheme = prefersDark ? 'dark' : 'light';
+          localStorage.setItem('theme', savedTheme);
+        }
+        
+        // Apply theme immediately
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      })();
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <header class="header" id="global-header"></header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-header page-header-top">
+                    <span class="eyebrow" data-i18n="products_eyebrow">Soluciones Packaged</span>
+                    <h1 class="section-title" data-i18n="products_title">Ecosistema de Productos</h1>
+                    <p class="section-description" data-i18n="products_desc">Herramientas diseñadas para potenciar la eficiencia operativa de tu empresa.</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Promociones Empresariales -->
+                    <div class="product-card card-dark" style="background: linear-gradient(145deg, #0f0f0f 0%, #2a2a2a 100%);">
+                        <div class="product-icon"><i class="ri-ticket-2-line"></i></div>
+                        <h3 data-i18n="product_engine_title">Engine de Promociones</h3>
+                        <p data-i18n="product_engine_desc">Sistemas avanzados para tómbolas digitales, raspaditas y mecánicas de marketing masivo.</p>
+                        <a href="portfolio.html" class="btn btn-white" data-i18n="product_view_cases">Ver casos</a>
+                    </div>
+
+                    <!-- Sistemas de Pagos -->
+                    <div class="product-card card-dark" style="background: linear-gradient(145deg, #0056b3 0%, #00a8cc 100%);">
+                        <div class="product-icon"><i class="ri-secure-payment-line"></i></div>
+                        <h3 data-i18n="product_payment_title">Manejo de Pagos</h3>
+                        <p data-i18n="product_payment_desc">Infraestructura robusta para la gestión de transacciones, portales de pago y conciliación bancaria.</p>
+                        <a href="contact.html" class="btn btn-white" data-i18n="product_request_demo">Solicitar Demo</a>
+                    </div>
+
+                    <!-- E-commerce Ready -->
+                    <div class="product-card card-dark" style="background: linear-gradient(145deg, #443cff 0%, #7e75ff 100%);">
+                        <div class="product-icon"><i class="ri-shopping-bag-3-line"></i></div>
+                        <h3 data-i18n="product_ecommerce_title">E-commerce Enterprise</h3>
+                        <p data-i18n="product_ecommerce_desc">Solución de tienda en línea lista para desplegar enfocada en alta transaccionalidad y escala.</p>
+                        <a href="contact.html" class="btn btn-white" data-i18n="product_consult">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="global-footer"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

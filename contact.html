@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Ninelives</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo negro.svg">
+    
+    <!-- Prevent flash of unstyled content (FOUC) -->
+    <script>
+      (function() {
+        // Get or set theme - always save to localStorage for consistency
+        let savedTheme = localStorage.getItem('theme');
+        
+        if (!savedTheme) {
+          // First visit - check system preference and save it
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          savedTheme = prefersDark ? 'dark' : 'light';
+          localStorage.setItem('theme', savedTheme);
+        }
+        
+        // Apply theme immediately
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      })();
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+    <style>
+        .contact-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--surface-color);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+        }
+        @media (max-width: 768px) {
+            .contact-form-container {
+                padding: 24px 20px;
+            }
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--heading-color); }
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="global-header"></header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-header page-header-top" style="margin-bottom: 60px;">
+                    <h1 class="section-title" data-i18n="contact_title">Hablemos</h1>
+                    <p class="section-description" data-i18n="contact_desc">Estamos listos para llevar tu infraestructura tecnológica al siguiente nivel.</p>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="form_name">Nombre Completo</label>
+                            <input type="text" class="form-input" data-i18n-placeholder="form_name_placeholder" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="form_email">Correo Corporativo</label>
+                            <input type="email" class="form-input" data-i18n-placeholder="form_email_placeholder" placeholder="nombre@ejemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="form_message">Mensaje</label>
+                            <textarea class="form-textarea" id="message-contact" rows="5" data-i18n-placeholder="form_message_placeholder" placeholder="¿Cómo podemos ayudarte?" maxlength="150" required></textarea>
+                            <div class="char-count" id="char-count-contact">0 / 150</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="form_submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="global-footer"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

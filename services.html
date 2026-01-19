@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Ninelives</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo negro.svg">
+    
+    <!-- Prevent flash of unstyled content (FOUC) -->
+    <script>
+      (function() {
+        // Get or set theme - always save to localStorage for consistency
+        let savedTheme = localStorage.getItem('theme');
+        
+        if (!savedTheme) {
+          // First visit - check system preference and save it
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          savedTheme = prefersDark ? 'dark' : 'light';
+          localStorage.setItem('theme', savedTheme);
+        }
+        
+        // Apply theme immediately
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      })();
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <header class="header" id="global-header"></header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-header page-header-top" style="text-align: left;">
+                    <span class="eyebrow" data-i18n="capabilities_eyebrow">Nuestras Capacidades</span>
+                    <h1 class="section-title" data-i18n="services_page_title">Servicios Tecnológicos</h1>
+                    <p class="section-description" data-i18n="services_page_desc" style="text-align: left; margin: 0;">Impulsamos la transformación digital de grandes organizaciones con soluciones a medida, escalables y seguras.</p>
+                </div>
+
+                <div class="products-grid">
+                    <div class="stat-card" style="align-items: flex-start; text-align: left;">
+                        <i class="ri-layout-line" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h3 data-i18n="service_landing_title">Landing Pages</h3>
+                        <p data-i18n="service_landing_desc">Diseñamos sitios de alto impacto optimizados para la máxima conversión de tus campañas digitales.</p>
+                    </div>
+                    <div class="stat-card" style="align-items: flex-start; text-align: left;">
+                        <i class="ri-megaphone-line" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h3 data-i18n="service_promo_title">Promociones Empresariales</h3>
+                        <p data-i18n="service_promo_desc">Herramientas digitales estratégicas para potenciar el alcance y la visibilidad de tu marca en el mercado.</p>
+                    </div>
+                    <div class="stat-card" style="align-items: flex-start; text-align: left;">
+                        <i class="ri-chat-smile-3-line" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h3 data-i18n="service_chat_title">Chatbots Inteligentes</h3>
+                        <p data-i18n="service_chat_desc">Automatización de atención al cliente con IA para respuestas inmediatas y eficiencia operativa 24/7.</p>
+                    </div>
+                    <div class="stat-card" style="align-items: flex-start; text-align: left;">
+                        <i class="ri-secure-payment-line" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h3 data-i18n="service_payment_title">Portales de Pago</h3>
+                        <p data-i18n="service_payment_desc">Integración de pasarelas seguras para transacciones ágiles y certificadas en plataformas e-commerce.</p>
+                    </div>
+                    <div class="stat-card" style="align-items: flex-start; text-align: left;">
+                        <i class="ri-settings-5-line" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h3 data-i18n="service_admin_title">Sistemas Administrativos</h3>
+                        <p data-i18n="service_admin_desc">Software a medida para centralizar la gestión de recursos y optimizar los flujos de trabajo internos.</p>
+                    </div>
+                    <div class="stat-card" style="align-items: flex-start; text-align: left;">
+                        <i class="ri-database-2-line" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h3 data-i18n="service_storage_title">Almacenamiento Masivo</h3>
+                        <p data-i18n="service_storage_desc">Infraestructura escalable y segura para el manejo crítico de grandes volúmenes de datos corporativos.</p>
+                    </div>
+                    <div class="stat-card" style="align-items: flex-start; text-align: left;">
+                        <i class="ri-server-line" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                        <h3 data-i18n="service_hosting_title">Hosting Empresarial</h3>
+                        <p data-i18n="service_hosting_desc">Servidores de alto rendimiento con máxima disponibilidad y soporte técnico de nivel corporativo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="global-footer"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

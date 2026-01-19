@@ -37,12 +37,12 @@
 [data-theme="dark"] {
   --text-color: #adbdcc;
   --heading-color: #ffffff;
-  --bg-color: #000000;
-  --surface-color: #0d0d0d; /* Slightly lighter than pure black for depth */
-  --border-color: rgba(255, 255, 255, 0.1);
+  --bg-color: #121212; /* Darkest shade from palette */
+  --surface-color: #1e1e1e; /* Second shade for surfaces */
+  --border-color: #2a2a2a; /* Tertiary shade for borders */
   --primary-color: #ffffff; 
-  --primary-light: #e6ebf1;
-  --on-primary: #000000; /* Black text on white button in dark mode */
+  --primary-light: #f1f1f1;
+  --on-primary: #121212; /* Contextual contrast */
 }
 
 * {
@@ -269,6 +269,10 @@ img {
 
 [data-theme="dark"] .logo-dark {
   display: block;
+}
+
+[data-theme="dark"] .client-logo img {
+  filter: brightness(0) invert(1);
 }
 
 .nav-list {
@@ -558,11 +562,19 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition: gap 0.4s ease;
+}
+
+.hero.scrolled-past .hero-title {
+  gap: 0;
 }
 
 .hero-logo-inline {
   display: flex;
   align-items: center;
+  max-width: 400px; /* Base max-width for transition */
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, max-width 0.4s ease, margin 0.4s ease;
 }
 
 .hero-logo-inline .hero-logo-img {
@@ -2708,21 +2720,14 @@ body::before {
   }
 }
 
-/* Hero Logo Transition */
-.hero-logo-inline {
-  display: flex;
-  align-items: center;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
 
-.hero-logo-inline {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
 
 .hero.scrolled-past .hero-logo-inline {
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
+  max-width: 0;
+  margin-right: 0;
 }
 
 .logo {
